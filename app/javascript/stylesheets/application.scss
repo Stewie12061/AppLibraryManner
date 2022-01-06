@@ -1,2 +1,53 @@
 @import './vendors/bootstrap';
 @import './vendors/fonts/awesome';    
+
+@import './auth';
+@import './dausach';
+
+
+
+
+hr{
+  height:4px;
+  border-width:0;
+  color:white;
+  background-color:white;
+  width: 100%;
+}
+span{
+  color: #A3A0FB;
+  margin-right: 20px;
+}
+body{
+  overflow-x: hidden;
+  background-color: rgba(163, 160, 251,0.3);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 0px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #A3A0FB; 
+  border-radius: 0px;
+}
+
+.title{
+  margin-top: 30px;
+}
+.bg-signin{
+position: relative;
+background: url('/assets/bg.jpg') no-repeat center center;
+background-size: 100% 100%;
+height: 642px;
+width: 100%;
+}
+.cancel{
+margin-top: 40px;
+}

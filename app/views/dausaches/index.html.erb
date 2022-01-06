@@ -1,31 +1,43 @@
-<p id="notice"><%= notice %></p>
+<h1 class="title">Đầu sách</h1>
 
-<h1>Dausaches</h1>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+    <th>
+      <h2>Danh sách đầu sách</h2>
+    </th>
+    <th>
+      <%= link_to "Thêm dữ liệu", new_dausach_path, class: 'btn btn-primary bg-primary' %>
+    </th>
+  </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tensach</th>
-      <th>Theloai</th>
-      <th>Tacgia</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @dausaches.each do |dausach| %>
-      <tr>
-        <td><%= dausach.tensach %></td>
-        <td><%= dausach.theloai %></td>
-        <td><%= dausach.tacgia %></td>
-        <td><%= link_to 'Show', dausach %></td>
-        <td><%= link_to 'Edit', edit_dausach_path(dausach) %></td>
-        <td><%= link_to 'Destroy', dausach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th scope="col">Đầu sách</th>
+        <th scope="col">Thể loại</th>
+        <th scope="col">Tác giá</th>
+        <th scope="col">Hành động</th>
       </tr>
-    <% end %>
-  </tbody>
+      <thread>
+        <% @dausaches.each do |dausach| %>
+          
+          <tr>
+          <th scope="row"><%= dausach.tensach %></th>
+          <td><%= dausach.theloai %></td>
+          <td><%= dausach.tacgia %></td>
+          <td>
+            <ul class="ulsach">
+              <li>
+                <%= link_to "Chỉnh sửa", edit_dausach_path(dausach), class: 'btn btn-primary bg-primary' %>
+              </li>
+              <li>
+                <%= link_to "Xóa", dausach, :method => :delete, data: { confirm: 'Are you sure?' } , class:'btn btn-primary bg-danger' %>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <% end %>
+      </thread>
 </table>
-
-<br>
-
-<%= link_to 'New Dausach', new_dausach_path %>
+</div>
