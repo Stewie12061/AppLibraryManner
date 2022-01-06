@@ -1,0 +1,32 @@
+<%= form_with(model: dausach) do |form| %>
+  <% if dausach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dausach.errors.count, "error") %> prohibited this dausach from being saved:</h2>
+
+      <ul>
+        <% dausach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tensach %>
+    <%= form.text_field :tensach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :theloai %>
+    <%= form.text_field :theloai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tacgia %>
+    <%= form.text_field :tacgia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
