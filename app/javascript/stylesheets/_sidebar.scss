@@ -1,0 +1,34 @@
+.bg-purple{
+    background-color: #43425D;
+}
+.navbar-brand{
+    color: white;
+    font-size: 25px;
+}
+.home a:hover{
+    color: #A3A0FB;
+}
+.nav-item {
+    margin-bottom: 23px;
+    a{
+    color: white;
+    font-size: 20px;
+    }
+    a:hover{
+        color: #A3A0FB;
+    }
+}
+.dropdown-menu{
+    background-color: #A3A0FB;
+}
+.home{
+    margin-top: 12px;
+}
+.sidebar-container{
+    position: relative;
+}
+.navbar{
+    position: sticky;
+    height: 100%;
+}
+

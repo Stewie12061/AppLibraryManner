@@ -1,6 +1,11 @@
-<h1>Editing Dausach</h1>
+<div class="container">
+</br>
+    <h1>Chỉnh sửa đầu sách</h1>
+    </br>
+    <div class="container-fluid">
+        <%= render 'form', dausach: @dausach %>
+        <%= link_to 'Show', @dausach, class:"btn btn-color"  %>
+        <%= link_to 'Back', dausaches_path, class:"btn btn-color" %>
+    </div>
+</div>
 
-<%= render 'form', dausach: @dausach %>
-
-<%= link_to 'Show', @dausach %> |
-<%= link_to 'Back', dausaches_path %>

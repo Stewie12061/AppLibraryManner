@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tracuusaches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Masach</th>
+      <th>Tensach</th>
+      <th>Theloai</th>
+      <th>Tacgia</th>
+      <th>Nhaxuatban</th>
+      <th>Namxuatban</th>
+      <th>Giatien</th>
+      <th>Soluong</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tracuusaches.each do |tracuusach| %>
+      <tr>
+        <td><%= tracuusach.masach %></td>
+        <td><%= tracuusach.tensach %></td>
+        <td><%= tracuusach.theloai %></td>
+        <td><%= tracuusach.tacgia %></td>
+        <td><%= tracuusach.nhaxuatban %></td>
+        <td><%= tracuusach.namxuatban %></td>
+        <td><%= tracuusach.giatien %></td>
+        <td><%= tracuusach.soluong %></td>
+        <td><%= link_to 'Show', tracuusach %></td>
+        <td><%= link_to 'Edit', edit_tracuusach_path(tracuusach) %></td>
+        <td><%= link_to 'Destroy', tracuusach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tracuusach', new_tracuusach_path %>

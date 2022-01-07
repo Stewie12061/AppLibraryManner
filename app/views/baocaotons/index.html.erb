@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Baocaotons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Masach</th>
+      <th>Tensach</th>
+      <th>Nhaxuatban</th>
+      <th>Namxuatban</th>
+      <th>Tondau</th>
+      <th>Phatsinhnhap</th>
+      <th>Phatsinhxuat</th>
+      <th>Toncuoi</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @baocaotons.each do |baocaoton| %>
+      <tr>
+        <td><%= baocaoton.masach %></td>
+        <td><%= baocaoton.tensach %></td>
+        <td><%= baocaoton.nhaxuatban %></td>
+        <td><%= baocaoton.namxuatban %></td>
+        <td><%= baocaoton.tondau %></td>
+        <td><%= baocaoton.phatsinhnhap %></td>
+        <td><%= baocaoton.phatsinhxuat %></td>
+        <td><%= baocaoton.toncuoi %></td>
+        <td><%= link_to 'Show', baocaoton %></td>
+        <td><%= link_to 'Edit', edit_baocaoton_path(baocaoton) %></td>
+        <td><%= link_to 'Destroy', baocaoton, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Baocaoton', new_baocaoton_path %>

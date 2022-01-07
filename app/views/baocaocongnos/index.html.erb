@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Baocaocongnos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Makh</th>
+      <th>Tenkh</th>
+      <th>Sdt</th>
+      <th>Email</th>
+      <th>Nodau</th>
+      <th>Tongtienmua</th>
+      <th>Sotientra</th>
+      <th>Nocuoi</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @baocaocongnos.each do |baocaocongno| %>
+      <tr>
+        <td><%= baocaocongno.makh %></td>
+        <td><%= baocaocongno.tenkh %></td>
+        <td><%= baocaocongno.sdt %></td>
+        <td><%= baocaocongno.email %></td>
+        <td><%= baocaocongno.nodau %></td>
+        <td><%= baocaocongno.tongtienmua %></td>
+        <td><%= baocaocongno.sotientra %></td>
+        <td><%= baocaocongno.nocuoi %></td>
+        <td><%= link_to 'Show', baocaocongno %></td>
+        <td><%= link_to 'Edit', edit_baocaocongno_path(baocaocongno) %></td>
+        <td><%= link_to 'Destroy', baocaocongno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Baocaocongno', new_baocaocongno_path %>

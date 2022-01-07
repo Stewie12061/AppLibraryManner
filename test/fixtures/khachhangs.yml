@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stt: 1
+  tenkh: MyString
+  makh: 1
+  diachi: MyString
+  email: MyString
+  ngaysinh: 2022-01-07
+  tongno: 1.5
+  loaikh: MyString
+
+two:
+  stt: 1
+  tenkh: MyString
+  makh: 1
+  diachi: MyString
+  email: MyString
+  ngaysinh: 2022-01-07
+  tongno: 1.5
+  loaikh: MyString

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hoadons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mahoadon</th>
+      <th>Ngaytao</th>
+      <th>Makh</th>
+      <th>Tenkh</th>
+      <th>Tientra</th>
+      <th>Tienno</th>
+      <th>Tongcong</th>
+      <th>Nguoitao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hoadons.each do |hoadon| %>
+      <tr>
+        <td><%= hoadon.mahoadon %></td>
+        <td><%= hoadon.ngaytao %></td>
+        <td><%= hoadon.makh %></td>
+        <td><%= hoadon.tenkh %></td>
+        <td><%= hoadon.tientra %></td>
+        <td><%= hoadon.tienno %></td>
+        <td><%= hoadon.tongcong %></td>
+        <td><%= hoadon.nguoitao %></td>
+        <td><%= link_to 'Show', hoadon %></td>
+        <td><%= link_to 'Edit', edit_hoadon_path(hoadon) %></td>
+        <td><%= link_to 'Destroy', hoadon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hoadon', new_hoadon_path %>

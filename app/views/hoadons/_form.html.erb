@@ -1,0 +1,57 @@
+<%= form_with(model: hoadon) do |form| %>
+  <% if hoadon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hoadon.errors.count, "error") %> prohibited this hoadon from being saved:</h2>
+
+      <ul>
+        <% hoadon.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :mahoadon %>
+    <%= form.number_field :mahoadon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ngaytao %>
+    <%= form.date_select :ngaytao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :makh %>
+    <%= form.number_field :makh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tenkh %>
+    <%= form.text_field :tenkh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tientra %>
+    <%= form.text_field :tientra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tienno %>
+    <%= form.text_field :tienno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tongcong %>
+    <%= form.text_field :tongcong %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nguoitao %>
+    <%= form.text_field :nguoitao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

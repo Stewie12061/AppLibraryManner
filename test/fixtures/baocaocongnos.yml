@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  makh: 1
+  tenkh: MyString
+  sdt: 1
+  email: MyString
+  nodau: 1.5
+  tongtienmua: 1.5
+  sotientra: 1.5
+  nocuoi: 1.5
+
+two:
+  makh: 1
+  tenkh: MyString
+  sdt: 1
+  email: MyString
+  nodau: 1.5
+  tongtienmua: 1.5
+  sotientra: 1.5
+  nocuoi: 1.5

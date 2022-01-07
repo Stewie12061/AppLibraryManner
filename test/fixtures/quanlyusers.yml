@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tenuser: MyString
+  tendangnhap: MyString
+  sdt: 1
+  email: MyString
+  ngaysinh: 2022-01-07
+  ngaytao: 2022-01-07
+  vitri: MyString
+
+two:
+  tenuser: MyString
+  tendangnhap: MyString
+  sdt: 1
+  email: MyString
+  ngaysinh: 2022-01-07
+  ngaytao: 2022-01-07
+  vitri: MyString

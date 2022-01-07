@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  masach: 1
+  tensach: MyString
+  nhaxuatban: MyString
+  namxuatban: 2022-01-07
+  tondau: 1
+  phatsinhnhap: 1
+  phatsinhxuat: 1
+  toncuoi: 1
+
+two:
+  masach: 1
+  tensach: MyString
+  nhaxuatban: MyString
+  namxuatban: 2022-01-07
+  tondau: 1
+  phatsinhnhap: 1
+  phatsinhxuat: 1
+  toncuoi: 1

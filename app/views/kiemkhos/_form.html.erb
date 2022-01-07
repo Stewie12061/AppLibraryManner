@@ -1,0 +1,62 @@
+<%= form_with(model: kiemkho) do |form| %>
+  <% if kiemkho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kiemkho.errors.count, "error") %> prohibited this kiemkho from being saved:</h2>
+
+      <ul>
+        <% kiemkho.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :masach %>
+    <%= form.number_field :masach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tensach %>
+    <%= form.text_field :tensach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :theloai %>
+    <%= form.text_field :theloai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tacgia %>
+    <%= form.text_field :tacgia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nhaxuatban %>
+    <%= form.text_field :nhaxuatban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namxuatban %>
+    <%= form.text_field :namxuatban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :giaban %>
+    <%= form.text_field :giaban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tonkho %>
+    <%= form.number_field :tonkho %>
+  </div>
+
+  <div class="field">
+    <%= form.label :soluong %>
+    <%= form.number_field :soluong %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

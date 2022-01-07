@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maphieuthu: 1
+  ngaytao: 2022-01-07
+  makh: 1
+  tenkh: MyString
+  tongcong: 1
+
+two:
+  maphieuthu: 1
+  ngaytao: 2022-01-07
+  makh: 1
+  tenkh: MyString
+  tongcong: 1

@@ -1,0 +1,29 @@
+.navbar-content{
+    color: white;
+    width: 50%;
+    float: right;
+    margin-left: 30%;
+    margin-top: 1%;
+    ul li{
+        font-size: 20px;
+        float: left;
+        list-style: none;
+        padding: 3px;
+    }
+}
+.navbar-link{
+
+    text-decoration: none;
+    color:#A3A0FB;
+    &:hover{
+        color: white;
+    }
+}
+.txt{
+    margin-right: 30px ;
+}
+.app{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}

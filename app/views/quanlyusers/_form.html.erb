@@ -1,0 +1,52 @@
+<%= form_with(model: quanlyuser) do |form| %>
+  <% if quanlyuser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quanlyuser.errors.count, "error") %> prohibited this quanlyuser from being saved:</h2>
+
+      <ul>
+        <% quanlyuser.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tenuser %>
+    <%= form.text_field :tenuser %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tendangnhap %>
+    <%= form.text_field :tendangnhap %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sdt %>
+    <%= form.number_field :sdt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ngaysinh %>
+    <%= form.date_select :ngaysinh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ngaytao %>
+    <%= form.date_select :ngaytao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vitri %>
+    <%= form.text_field :vitri %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,57 @@
+<%= form_with(model: khachhang) do |form| %>
+  <% if khachhang.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(khachhang.errors.count, "error") %> prohibited this khachhang from being saved:</h2>
+
+      <ul>
+        <% khachhang.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :stt %>
+    <%= form.number_field :stt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tenkh %>
+    <%= form.text_field :tenkh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :makh %>
+    <%= form.number_field :makh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diachi %>
+    <%= form.text_field :diachi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ngaysinh %>
+    <%= form.date_select :ngaysinh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tongno %>
+    <%= form.text_field :tongno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loaikh %>
+    <%= form.text_field :loaikh %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

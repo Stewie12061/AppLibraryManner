@@ -1,19 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Tensach:</strong>
-  <%= @dausach.tensach %>
-</p>
+  <p>
+    <strong>Tensach:</strong>
+    <%= @dausach.tensach %>
+  </p>
 
-<p>
-  <strong>Theloai:</strong>
-  <%= @dausach.theloai %>
-</p>
+  <p>
+    <strong>Theloai:</strong>
+    <%= @dausach.theloai %>
+  </p>
 
-<p>
-  <strong>Tacgia:</strong>
-  <%= @dausach.tacgia %>
-</p>
+  <p>
+    <strong>Tacgia:</strong>
+    <%= @dausach.tacgia %>
+  </p>
 
-<%= link_to 'Edit', edit_dausach_path(@dausach) %> |
-<%= link_to 'Back', dausaches_path %>
+  <%= link_to 'Edit', edit_dausach_path(@dausach), class:"btn btn-color"  %>
+  <%= link_to 'Back', dausaches_path, class:"btn btn-color"  %>
+</div>

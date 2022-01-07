@@ -1,0 +1,57 @@
+<%= form_with(model: baocaoton) do |form| %>
+  <% if baocaoton.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(baocaoton.errors.count, "error") %> prohibited this baocaoton from being saved:</h2>
+
+      <ul>
+        <% baocaoton.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :masach %>
+    <%= form.number_field :masach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tensach %>
+    <%= form.text_field :tensach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nhaxuatban %>
+    <%= form.text_field :nhaxuatban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namxuatban %>
+    <%= form.date_select :namxuatban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tondau %>
+    <%= form.number_field :tondau %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phatsinhnhap %>
+    <%= form.number_field :phatsinhnhap %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phatsinhxuat %>
+    <%= form.number_field :phatsinhxuat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :toncuoi %>
+    <%= form.number_field :toncuoi %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

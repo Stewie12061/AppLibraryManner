@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Quanlyusers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tenuser</th>
+      <th>Tendangnhap</th>
+      <th>Sdt</th>
+      <th>Email</th>
+      <th>Ngaysinh</th>
+      <th>Ngaytao</th>
+      <th>Vitri</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quanlyusers.each do |quanlyuser| %>
+      <tr>
+        <td><%= quanlyuser.tenuser %></td>
+        <td><%= quanlyuser.tendangnhap %></td>
+        <td><%= quanlyuser.sdt %></td>
+        <td><%= quanlyuser.email %></td>
+        <td><%= quanlyuser.ngaysinh %></td>
+        <td><%= quanlyuser.ngaytao %></td>
+        <td><%= quanlyuser.vitri %></td>
+        <td><%= link_to 'Show', quanlyuser %></td>
+        <td><%= link_to 'Edit', edit_quanlyuser_path(quanlyuser) %></td>
+        <td><%= link_to 'Destroy', quanlyuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quanlyuser', new_quanlyuser_path %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kiemkhos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Masach</th>
+      <th>Tensach</th>
+      <th>Theloai</th>
+      <th>Tacgia</th>
+      <th>Nhaxuatban</th>
+      <th>Namxuatban</th>
+      <th>Giaban</th>
+      <th>Tonkho</th>
+      <th>Soluong</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kiemkhos.each do |kiemkho| %>
+      <tr>
+        <td><%= kiemkho.masach %></td>
+        <td><%= kiemkho.tensach %></td>
+        <td><%= kiemkho.theloai %></td>
+        <td><%= kiemkho.tacgia %></td>
+        <td><%= kiemkho.nhaxuatban %></td>
+        <td><%= kiemkho.namxuatban %></td>
+        <td><%= kiemkho.giaban %></td>
+        <td><%= kiemkho.tonkho %></td>
+        <td><%= kiemkho.soluong %></td>
+        <td><%= link_to 'Show', kiemkho %></td>
+        <td><%= link_to 'Edit', edit_kiemkho_path(kiemkho) %></td>
+        <td><%= link_to 'Destroy', kiemkho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kiemkho', new_kiemkho_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  masach: 1
+  tensach: MyString
+  theloai: MyString
+  tacgia: MyString
+  nhaxuatban: MyString
+  namxuatban: MyString
+  giaban: 1.5
+  tonkho: 1
+  soluong: 1
+
+two:
+  masach: 1
+  tensach: MyString
+  theloai: MyString
+  tacgia: MyString
+  nhaxuatban: MyString
+  namxuatban: MyString
+  giaban: 1.5
+  tonkho: 1
+  soluong: 1

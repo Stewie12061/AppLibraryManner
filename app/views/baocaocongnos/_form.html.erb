@@ -1,0 +1,57 @@
+<%= form_with(model: baocaocongno) do |form| %>
+  <% if baocaocongno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(baocaocongno.errors.count, "error") %> prohibited this baocaocongno from being saved:</h2>
+
+      <ul>
+        <% baocaocongno.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :makh %>
+    <%= form.number_field :makh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tenkh %>
+    <%= form.text_field :tenkh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sdt %>
+    <%= form.number_field :sdt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nodau %>
+    <%= form.text_field :nodau %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tongtienmua %>
+    <%= form.text_field :tongtienmua %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sotientra %>
+    <%= form.text_field :sotientra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nocuoi %>
+    <%= form.text_field :nocuoi %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

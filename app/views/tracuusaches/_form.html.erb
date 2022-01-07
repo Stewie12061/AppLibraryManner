@@ -1,0 +1,57 @@
+<%= form_with(model: tracuusach) do |form| %>
+  <% if tracuusach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tracuusach.errors.count, "error") %> prohibited this tracuusach from being saved:</h2>
+
+      <ul>
+        <% tracuusach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :masach %>
+    <%= form.number_field :masach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tensach %>
+    <%= form.text_field :tensach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :theloai %>
+    <%= form.text_field :theloai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tacgia %>
+    <%= form.text_field :tacgia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nhaxuatban %>
+    <%= form.text_field :nhaxuatban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namxuatban %>
+    <%= form.number_field :namxuatban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :giatien %>
+    <%= form.text_field :giatien %>
+  </div>
+
+  <div class="field">
+    <%= form.label :soluong %>
+    <%= form.number_field :soluong %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
