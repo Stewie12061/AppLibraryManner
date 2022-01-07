@@ -1,41 +1,55 @@
-<p id="notice"><%= notice %></p>
+<h1 class="title">Hóa đơn</h1>
 
-<h1>Hoadons</h1>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+    <th>
+      <h2>Danh sách hóa đơn</h2>
+    </th>
+    <th>
+      <%= link_to "Thêm dữ liệu", new_hoadon_path, class: 'btn btn-primary bg-primary' %>
+    </th>
+  </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Mahoadon</th>
-      <th>Ngaytao</th>
-      <th>Makh</th>
-      <th>Tenkh</th>
-      <th>Tientra</th>
-      <th>Tienno</th>
-      <th>Tongcong</th>
-      <th>Nguoitao</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @hoadons.each do |hoadon| %>
-      <tr>
-        <td><%= hoadon.mahoadon %></td>
-        <td><%= hoadon.ngaytao %></td>
-        <td><%= hoadon.makh %></td>
-        <td><%= hoadon.tenkh %></td>
-        <td><%= hoadon.tientra %></td>
-        <td><%= hoadon.tienno %></td>
-        <td><%= hoadon.tongcong %></td>
-        <td><%= hoadon.nguoitao %></td>
-        <td><%= link_to 'Show', hoadon %></td>
-        <td><%= link_to 'Edit', edit_hoadon_path(hoadon) %></td>
-        <td><%= link_to 'Destroy', hoadon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th scope="col">Mã hóa đơn</th>
+        <th scope="col">Ngày tạo</th>
+        <th scope="col">Mã khách hàng</th>
+        <th scope="col">Tên khách hàng</th>
+        <th scope="col">Số tiền trả</th>
+        <th scope="col">Tiền nợ</th>
+        <th scope="col">Tổng cộng</th>
+        <th scope="col">Người tạo</th>
+        <th scope="col">Hành động</th>
       </tr>
-    <% end %>
-  </tbody>
+      <thread>        
+        <% @hoadons.each do |hoadon| %>
+          
+          <tr>
+          <th scope="row"><%= hoadon.mahoadon %></th>
+          <td><%= hoadon.ngaytao %></td>
+          <td><%= hoadon.makh %></td>
+          <td><%= hoadon.tenkh %></td>
+          <td><%= hoadon.tientra %> (VND)</td>
+          <td><%= hoadon.tienno %> (VND)</td>
+          <td><%= hoadon.tongcong %> (VND)</td>
+          <td><%= hoadon.nguoitao %></td>
+          <td>
+            <ul class="ulhoadon">
+            <li>
+            <%= link_to "Chỉnh sửa", edit_hoadon_path(hoadon), class: 'btn btn-primary bg-primary' %>
+          </li>
+          <li>
+            <%= link_to "Xóa", hoadon, :confirm => "Xóa dữ liệu ?", :method => :delete , class:'btn btn-primary bg-danger' %>
+          </li>
+            </ul>
+          </td>
+        </tr>
+        <% end %>
+      </thread>
+    </table>
+  </tr>
 </table>
-
-<br>
-
-<%= link_to 'New Hoadon', new_hoadon_path %>
+</div>

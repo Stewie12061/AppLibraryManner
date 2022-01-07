@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Phieunhaps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Maphieunhap</th>
+      <th>Ngaytao</th>
+      <th>Tongcong</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phieunhaps.each do |phieunhap| %>
+      <tr>
+        <td><%= phieunhap.maphieunhap %></td>
+        <td><%= phieunhap.ngaytao %></td>
+        <td><%= phieunhap.tongcong %></td>
+        <td><%= link_to 'Show', phieunhap %></td>
+        <td><%= link_to 'Edit', edit_phieunhap_path(phieunhap) %></td>
+        <td><%= link_to 'Destroy', phieunhap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phieunhap', new_phieunhap_path %>

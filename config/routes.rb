@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :phieunhaps
+  resources :quydinh
   resources :quanlyusers
   resources :baocaocongnos
   resources :baocaotons
@@ -9,5 +11,15 @@ Rails.application.routes.draw do
   resources :tracuusaches
   resources :tacgia
   resources :dausaches
+  resources :home
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions', 
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
+  devise_scope :user do
+    root :to => 'home#index'
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

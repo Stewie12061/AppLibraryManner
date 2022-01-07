@@ -8,9 +8,43 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand app" href="<%= home_index_path %>">LibaryManagerApp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-content collapse navbar-collapse" id="navbarScroll">
+          <% if user_signed_in? %>
+          <ul>
+            <li class='txt'>Logged in as <strong><%= current_user.email %></strong></li>
+            <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+            <li>|</li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
+          </ul>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+
+
+    <% if user_signed_in? %>
+      <div class="row">
+        <div class="col-3 sidebar-container">
+          <%= render 'layouts/partials/sidebar' %>
+        </div>
+        <div class="col-9">
+          <%= yield %>
+        </div>      
+      </div>
+    <% else %>
+          <div class="container-fluid bg-signin">
+            <%= yield %>
+          </div>
+    <% end %>
   </body>
 </html>

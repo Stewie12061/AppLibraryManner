@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maphieunhap: 1
+  ngaytao: 2022-01-07
+  tongcong: 1.5
+
+two:
+  maphieunhap: 1
+  ngaytao: 2022-01-07
+  tongcong: 1.5

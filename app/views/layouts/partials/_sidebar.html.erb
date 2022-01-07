@@ -1,0 +1,66 @@
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="bg-purple sidebar">
+  <div  class="container-fluid flex-column">
+    <div class="container-fluid home">
+        <h1 class="navbar-brand" href=""><span><i class="fas fa-columns"></i></span>Bảng điều khiển</h1>
+        <hr>
+    </div>
+    <div class="container-fluid">
+      <!-- Links -->
+      <ul class="navbar-nav flex-column">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span><i class="fas fa-tasks"></i></span>Quản lý sách
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="<%= dausaches_path %>">Đầu sách</a></li>
+            <li><a class="dropdown-item" href="<%= tacgia_path %>">Tác giả</a></li>
+            <li><a class="dropdown-item" href="#">Thể loại sách</a></li>
+            <li><a class="dropdown-item" href="<%= tracuusaches_path %>">Tra cứu sách</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<%= hoadons_path %>"> <span><i class="fas fa-file-invoice-dollar"></i></span>Hóa đơn</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<%= phieunhaps_path %>"><span><i class="fab fa-elementor"></i></span>Phiếu nhập sách</a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="<%= kiemkhos_path %>"><span><i class="fas fa-receipt"></i></span>Kiểm kho</a>
+      </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<%= khachhangs_path %>"><span><i class="fas fa-user"></i></span>Khách hàng</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<%= phieuthus_path %>"><span><i class="fas fa-file-invoice"></i></span>Phiếu thu</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span><i class="fas fa-tasks"></i></span>Báo cáo
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="<%= baocaotons_path %>">Báo cáo tồn</a></li>
+            <li><a class="dropdown-item" href="<%= baocaocongnos_path %>">Báo cáo công nợ</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<%= quanlyusers_path %>"><span><i class="fas fa-address-book"></i></span>Quản lý người dùng</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="<%= quydinh_index_path %>"><span><i class="fas fa-cog"></i></span>Thay đổi quy định</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
