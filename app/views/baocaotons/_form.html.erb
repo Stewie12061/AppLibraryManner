@@ -1,57 +1,59 @@
-<%= form_with(model: baocaoton) do |form| %>
-  <% if baocaoton.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(baocaoton.errors.count, "error") %> prohibited this baocaoton from being saved:</h2>
+<div class="container-fluid"> 
+  <%= form_with(model: baocaoton) do |form| %>
+    <% if baocaoton.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(baocaoton.errors.count, "error") %> prohibited this baocaoton from being saved:</h2>
 
-      <ul>
-        <% baocaoton.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% baocaoton.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= form.label "Mã sách" %>
+      <%= form.number_field :masach, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tên sách" %>
+      <%= form.text_field :tensach, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Nhà xuất bản" %>
+      <%= form.text_field :nhaxuatban, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Năm xuất bản" %>
+      <%= form.text_field :namxuatban, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tồn đầu" %>
+      <%= form.number_field :tondau, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Phát sinh nhập" %>
+      <%= form.number_field :phatsinhnhap, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Phát sinh xuất" %>
+      <%= form.number_field :phatsinhxuat, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tồn cuối" %>
+      <%= form.number_field :toncuoi, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "lưu chỉnh sửa", class:"btn btn-color" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :masach %>
-    <%= form.number_field :masach %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tensach %>
-    <%= form.text_field :tensach %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nhaxuatban %>
-    <%= form.text_field :nhaxuatban %>
-  </div>
-
-  <div class="field">
-    <%= form.label :namxuatban %>
-    <%= form.date_select :namxuatban %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tondau %>
-    <%= form.number_field :tondau %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phatsinhnhap %>
-    <%= form.number_field :phatsinhnhap %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phatsinhxuat %>
-    <%= form.number_field :phatsinhxuat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :toncuoi %>
-    <%= form.number_field :toncuoi %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

@@ -22,7 +22,7 @@
           <% if user_signed_in? %>
           <ul>
             <li class='txt'>Đang đăng nhập: <strong><%= current_user.email %></strong></li>
-            <li><%= link_to 'Chỉnh sửa User', edit_user_registration_path, :class => 'navbar-link' %></li>
+            <li><%= link_to 'Chỉnh sửa Người dùng', edit_user_registration_path, :class => 'navbar-link' %></li>
             <li>|</li>
             <li><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
           </ul>

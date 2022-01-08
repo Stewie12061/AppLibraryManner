@@ -1,6 +1,10 @@
-<h1>Editing Baocaocongno</h1>
+<div class="container">
+</br>
+    <h1>Editing Baocaocongno</h1>
+    </br>
+    <%= render 'form', baocaocongno: @baocaocongno %>
 
-<%= render 'form', baocaocongno: @baocaocongno %>
-
-<%= link_to 'Show', @baocaocongno %> |
-<%= link_to 'Back', baocaocongnos_path %>
+    <%= link_to 'Show', @baocaocongno, class: 'btn btn-color' %>
+    <%= link_to 'Trở lại', baocaocongnos_path, class: 'btn btn-color' %>
+<div class="container">
+</br>

@@ -1,41 +1,40 @@
 <p id="notice"><%= notice %></p>
+<h1 class="title">Báo cáo công nợ</h1>
 
-<h1>Baocaotons</h1>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+    <h2>Danh sách Báo cáo công nợ</h2>
+  </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Masach</th>
-      <th>Tensach</th>
-      <th>Nhaxuatban</th>
-      <th>Namxuatban</th>
-      <th>Tondau</th>
-      <th>Phatsinhnhap</th>
-      <th>Phatsinhxuat</th>
-      <th>Toncuoi</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @baocaotons.each do |baocaoton| %>
-      <tr>
-        <td><%= baocaoton.masach %></td>
-        <td><%= baocaoton.tensach %></td>
-        <td><%= baocaoton.nhaxuatban %></td>
-        <td><%= baocaoton.namxuatban %></td>
-        <td><%= baocaoton.tondau %></td>
-        <td><%= baocaoton.phatsinhnhap %></td>
-        <td><%= baocaoton.phatsinhxuat %></td>
-        <td><%= baocaoton.toncuoi %></td>
-        <td><%= link_to 'Show', baocaoton %></td>
-        <td><%= link_to 'Edit', edit_baocaoton_path(baocaoton) %></td>
-        <td><%= link_to 'Destroy', baocaoton, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th scope="col">Mã sách</th>
+        <th scope="col">Tên sách</th>
+        <th scope="col">Nhà xuất bản</th>
+        <th scope="col">Năm xuất bản</th>
+        <th scope="col">Tồn đầu</th>
+        <th scope="col">Phát sinh nhập</th>
+        <th scope="col">Phát sinh nhập</th>
+        <th scope="col">Tồn cuối</th>
       </tr>
-    <% end %>
-  </tbody>
+      <thread>
+        <% @baocaotons.each do |baocaoton| %>
+          <tr>
+            <td scope="row"><%= baocaoton.masach %></td>
+            <td><%= baocaoton.tensach %></td>
+            <td><%= baocaoton.nhaxuatban %></td>
+            <td><%= baocaoton.namxuatban %></td>
+            <td><%= baocaoton.tondau %></td>
+            <td><%= baocaoton.phatsinhnhap %></td>
+            <td><%= baocaoton.phatsinhxuat %></td>
+            <td><%= baocaoton.toncuoi %></td>
+          </tr>
+        <% end %>   
+      </thread>
+    </table>
+
+  </tr>
 </table>
-
-<br>
-
-<%= link_to 'New Baocaoton', new_baocaoton_path %>
+</div>

@@ -17,11 +17,6 @@
   </p>
 
   <p>
-    <strong>Email:</strong>
-    <%= @quanlyuser.email %>
-  </p>
-
-  <p>
     <strong>Ngaysinh:</strong>
     <%= @quanlyuser.ngaysinh %>
   </p>
@@ -36,7 +31,7 @@
     <%= @quanlyuser.vitri %>
   </p>
 
-  <%= link_to 'Edit', edit_quanlyuser_path(@quanlyuser) %> |
-  <%= link_to 'Back', quanlyusers_path %>
+  <%= link_to 'Edit', edit_quanlyuser_path(@quanlyuser), class: 'btn btn-color' %>
+  <%= link_to 'Back', quanlyusers_path, class: 'btn btn-color' %>
 </div>
 </br>

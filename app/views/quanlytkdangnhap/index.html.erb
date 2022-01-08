@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<h1 class="title">Quản lý người dùng</h1>
+</br>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+    <th>
+        <h2>Danh sách người dùng</h2>
+    </th>
+    <th>
+      <%= link_to "Trở lại", :back, class: 'btn btn-color' %>
+    </th>
+  </tr>
+
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+      <th scope="col">ID</th>
+      <th scope="col">Tên đăng nhập</th>
+      <th scope="col">Hành động</th>
+      </tr>
+      <thread>      
+        <% @user.each do |user| %>
+          <tr>
+            <th scope="row"><%= user.id %></th>
+            <th scope="row"><%= user.email %></th>
+            <td>
+              <ul class="uluser">
+                <li>
+                  <%= link_to "Chỉnh sửa", edit_user_registration_path, class: 'btn btn-primary bg-primary' %>
+                </li>
+                <li>
+                  <%= link_to "Xóa tài khoản", registration_path(user), data: { confirm: "Are you sure?" }, :method => :delete , class:'btn btn-primary bg-danger' %>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        <% end %>
+        
+      </thread>
+    </table>
+  </tr>
+</table>
+</div>

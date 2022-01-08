@@ -4,28 +4,41 @@
 <div class="container-fluid tablecontain">
 <table class="table align-middle">
   <tr>
-    <h2>Danh sách người dùng</h2>
+    <th>
+      <h2>Danh sách người dùng</h2>
+    </th>
+    <th>
+      <%= link_to "Quản lý tài khoản đăng nhập", quanlytkdangnhap_index_path, class: 'btn btn-color' %>
+    </th>
   </tr>
 
   <tr>
     <table class="table table-bordered table-hover">
       <tr class="table-dark">
-      <th scope="col">ID</th>
-      <th scope="col">Tên đăng nhập</th>
-      <th scope="col">Hành động</th>
+        <th scope="col">Tên người dùng</th>
+        <th scope="col">Tên đăng nhập</th>
+        <th scope="col">Số điện thoại</th>
+        <th scope="col">Ngày sinh</th>
+        <th scope="col">Ngày tạo</th>
+        <th scope="col">Vị trí</th>
+        <th scope="col">Hành động</th>
       </tr>
       <thread>      
-        <% @user.each do |user| %>
+        <% @quanlyusers.each do |quanlyuser| %>
           <tr>
-            <th scope="row"><%= user.id %></th>
-            <th scope="row"><%= user.email %></th>
+            <th scope="row"><%= quanlyuser.tenuser %></th>
+            <td><%= quanlyuser.tendangnhap %></td>
+            <td><%= quanlyuser.sdt %></td>
+            <td><%= quanlyuser.ngaysinh %></td>
+            <td><%= quanlyuser.ngaytao %></td>
+            <td><%= quanlyuser.vitri %></td>
             <td>
-              <ul class="uluser">
+              <ul class="ulthu">
                 <li>
-                  <%= link_to "Chỉnh sửa", edit_user_registration_path, class: 'btn btn-primary bg-primary' %>
+                  <%= link_to "Chỉnh sửa", edit_quanlyuser_path(quanlyuser), class: 'btn btn-primary bg-primary' %>
                 </li>
                 <li>
-                  <%= link_to "Xóa tài khoản", registration_path(user), data: { confirm: "Are you sure?" }, :method => :delete , class:'btn btn-primary bg-danger' %>
+                  <%= link_to "Xóa", quanlyuser, :confirm => "Xóa dữ liệu ?", :method => :delete , class:'btn btn-primary bg-danger' %>
                 </li>
               </ul>
             </td>

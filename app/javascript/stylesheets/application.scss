@@ -61,3 +61,38 @@ body{
 .uluser{
   padding-left: 25%;
 }
+
+.tablecontain{
+  background-color: #F7F6FB;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 100%;
+}
+.row{
+  width: 100%;
+}
+
+@media screen and (max-width: 1250px){
+  table{
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 750px){
+  h2{
+    font-size: 20px;
+  }
+  h1{
+    font-size: 20px;
+  }
+  a{
+    font-size: 10px;
+  }
+  .yeild{
+    width: 100%;
+  }
+  .btn{
+    font-size: 10px;
+  }
+
+}
+
