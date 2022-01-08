@@ -1,35 +1,49 @@
 <p id="notice"><%= notice %></p>
+<h1 class="title">Phiếu thu</h1>
 
-<h1>Phieuthus</h1>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+    <th>
+      <h2>Danh sách phiếu thu</h2>
+    </th>
+    <th>
+      <%= link_to "Thêm dữ liệu", new_phieuthu_path, class: 'btn btn-primary bg-primary' %>
+    </th>
+  </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Maphieuthu</th>
-      <th>Ngaytao</th>
-      <th>Makh</th>
-      <th>Tenkh</th>
-      <th>Tongcong</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @phieuthus.each do |phieuthu| %>
-      <tr>
-        <td><%= phieuthu.maphieuthu %></td>
-        <td><%= phieuthu.ngaytao %></td>
-        <td><%= phieuthu.makh %></td>
-        <td><%= phieuthu.tenkh %></td>
-        <td><%= phieuthu.tongcong %></td>
-        <td><%= link_to 'Show', phieuthu %></td>
-        <td><%= link_to 'Edit', edit_phieuthu_path(phieuthu) %></td>
-        <td><%= link_to 'Destroy', phieuthu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th scope="col">Mã phiếu thu</th>
+        <th scope="col">Ngày tạo</th>
+        <th scope="col">Mã khách hàng</th>
+        <th scope="col">Tên khách hàng</th>
+        <th scope="col">Tổng cộng</th>
+        <th scope="col">Hành động</th>
       </tr>
-    <% end %>
-  </tbody>
+      <thread>
+        <% @phieuthus.each do |phieuthu| %>
+          <tr>
+            <th scope="row"><%= phieuthu.maphieuthu %></th>
+            <td><%= phieuthu.ngaytao %></td>
+            <td><%= phieuthu.makh %></td>
+            <td><%= phieuthu.tenkh %></td>
+            <td><%= phieuthu.tongcong %> (VND)</td>
+            <td>
+              <ul class="ulthu">
+                <li>
+                  <%= link_to "Chỉnh sửa", edit_phieuthu_path(phieuthu), class: 'btn btn-primary bg-primary' %>
+                </li>
+                <li>
+                  <%= link_to "Xóa", phieuthu, data: { confirm: 'Xóa dữ liệu?' }, :method => :delete , class:'btn btn-primary bg-danger' %>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        <% end %>
+      </thread>
+    </table>
+  </tr>
 </table>
-
-<br>
-
-<%= link_to 'New Phieuthu', new_phieuthu_path %>
+</div>

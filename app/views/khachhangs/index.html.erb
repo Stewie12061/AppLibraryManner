@@ -1,41 +1,57 @@
 <p id="notice"><%= notice %></p>
+<h1 class="title">khách hàng</h1>
 
-<h1>Khachhangs</h1>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+    <th>
+      <h2>Danh sách khách hàng</h2>
+    </th>
+    <th>
+      <%= link_to "Thêm dữ liệu", new_khachhang_path, class: 'btn btn-primary bg-primary' %>
+    </th>
+  </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Stt</th>
-      <th>Tenkh</th>
-      <th>Makh</th>
-      <th>Diachi</th>
-      <th>Email</th>
-      <th>Ngaysinh</th>
-      <th>Tongno</th>
-      <th>Loaikh</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @khachhangs.each do |khachhang| %>
-      <tr>
-        <td><%= khachhang.stt %></td>
-        <td><%= khachhang.tenkh %></td>
-        <td><%= khachhang.makh %></td>
-        <td><%= khachhang.diachi %></td>
-        <td><%= khachhang.email %></td>
-        <td><%= khachhang.ngaysinh %></td>
-        <td><%= khachhang.tongno %></td>
-        <td><%= khachhang.loaikh %></td>
-        <td><%= link_to 'Show', khachhang %></td>
-        <td><%= link_to 'Edit', edit_khachhang_path(khachhang) %></td>
-        <td><%= link_to 'Destroy', khachhang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th scope="col">STT</th>
+        <th scope="col">Tên khách hàng</th>
+        <th scope="col">Mã khách hàng</th>
+        <th scope="col">Địa chỉ</th>
+        <th scope="col">Email</th>
+        <th scope="col">Ngày sinh</th>
+        <th scope="col">Tổng nợ</th>
+        <th scope="col">Loại khách hàng</th>
+        <th scope="col">Hành động</th>
       </tr>
-    <% end %>
-  </tbody>
+      <thread>
+        <% @khachhangs.each do |khachhang| %>
+          <tr>
+          <th scope="row"><%= khachhang.stt %></th>
+          <td><%= khachhang.tenkh %></td>
+          <td><%= khachhang.makh %></td>
+          <td><%= khachhang.diachi %></td>
+          <td><%= khachhang.email %></td>
+          <td><%= khachhang.ngaysinh %></td>
+          <td><%= khachhang.tongno %> (VND)</td>
+          <td><%= khachhang.loaikh %></td>
+          <td>
+            <ul class="ulkhachhang">
+              <li>
+                <%= link_to "Chỉnh sửa", edit_khachhang_path(khachhang), class: 'btn btn-primary bg-primary' %>
+              </li>
+              <li>
+                <%= link_to "Xóa", khachhang, data: { confirm: 'Xóa dữ liệu?' }, :method => :delete , class:'btn btn-primary bg-danger' %>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <% end %>
+      </thread>
+    </table>
+
+  
+  </tr>
 </table>
-
-<br>
-
-<%= link_to 'New Khachhang', new_khachhang_path %>
+</div>

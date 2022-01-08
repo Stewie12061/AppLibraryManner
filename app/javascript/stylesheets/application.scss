@@ -25,6 +25,7 @@ span{
 body{
     overflow-x: hidden;
     background-color: rgba(163, 160, 251,0.3);
+    position: relative;
 }
 ::-webkit-scrollbar {
     width: 6px;
@@ -56,3 +57,7 @@ body{
   margin-top: 40px;
 }
 
+  
+.uluser{
+  padding-left: 25%;
+}

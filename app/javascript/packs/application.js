@@ -12,3 +12,4 @@ Turbolinks.start()
 
 import '../stylesheets/application'
 import 'bootstrap'
+

@@ -5,7 +5,7 @@ class Khachhang
   field :makh, type: Integer
   field :diachi, type: String
   field :email, type: String
-  field :ngaysinh, type: Date
+  field :ngaysinh, type: String
   field :tongno, type: Float
   field :loaikh, type: String
 end

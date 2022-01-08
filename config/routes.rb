@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :phieunhaps
   resources :quydinh
-  resources :quanlyusers
+  resources :quanlyusers, only: [:show, :index]
   resources :baocaocongnos
   resources :baocaotons
   resources :phieuthus

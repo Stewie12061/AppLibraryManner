@@ -1,43 +1,58 @@
 <p id="notice"><%= notice %></p>
+<h1 class="title">Kiểm kho</h1>
 
-<h1>Kiemkhos</h1>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+    <th>
+      <h2>Danh sách Kiểm kho</h2>
+    </th>
+    <th>
+      <%= link_to "Thêm dữ liệu", new_kiemkho_path, class: 'btn btn-primary bg-primary' %>
+    </th>
+  </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Masach</th>
-      <th>Tensach</th>
-      <th>Theloai</th>
-      <th>Tacgia</th>
-      <th>Nhaxuatban</th>
-      <th>Namxuatban</th>
-      <th>Giaban</th>
-      <th>Tonkho</th>
-      <th>Soluong</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @kiemkhos.each do |kiemkho| %>
-      <tr>
-        <td><%= kiemkho.masach %></td>
-        <td><%= kiemkho.tensach %></td>
-        <td><%= kiemkho.theloai %></td>
-        <td><%= kiemkho.tacgia %></td>
-        <td><%= kiemkho.nhaxuatban %></td>
-        <td><%= kiemkho.namxuatban %></td>
-        <td><%= kiemkho.giaban %></td>
-        <td><%= kiemkho.tonkho %></td>
-        <td><%= kiemkho.soluong %></td>
-        <td><%= link_to 'Show', kiemkho %></td>
-        <td><%= link_to 'Edit', edit_kiemkho_path(kiemkho) %></td>
-        <td><%= link_to 'Destroy', kiemkho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th scope="col">Mã sách</th>
+        <th scope="col">tên sách</th>
+        <th scope="col">Thể loại</th>
+        <th scope="col">Tác giả</th>
+        <th scope="col">Nhà xuất bản</th>
+        <th scope="col">Năm xuất bản</th>
+        <th scope="col">Giá bán</th>
+        <th scope="col">Tồn kho</th>
+        <th scope="col">Số lượng</th>
+        <th scope="col">Hành động</th>
       </tr>
-    <% end %>
-  </tbody>
+      <thread>        
+        <% @kiemkhos.each do |kiemkho| %>
+          
+          <tr>
+            <th scope="row"><%= kiemkho.masach %></td>
+            <td><%= kiemkho.tensach %></td>
+            <td><%= kiemkho.theloai %></td>
+            <td><%= kiemkho.tacgia %></td>
+            <td><%= kiemkho.nhaxuatban %></td>
+            <td><%= kiemkho.namxuatban %></td>
+            <td><%= kiemkho.giaban %></td>
+            <td><%= kiemkho.tonkho %></td>
+            <td><%= kiemkho.soluong %></td>
+            <td>
+              <ul class="ulhoadon">
+              <li>
+              <%= link_to "Chỉnh sửa", edit_kiemkho_path(kiemkho), class: 'btn btn-primary bg-primary' %>
+            </li>
+            <li>
+              <%= link_to "Xóa", kiemkho, data: { confirm: 'Xóa dữ liệu?' }, :method => :delete , class:'btn btn-primary bg-danger' %>
+            </li>
+              </ul>
+            </td>
+          </tr>
+        <% end %>
+      </thread>
+    </table>
+  </tr>
 </table>
-
-<br>
-
-<%= link_to 'New Kiemkho', new_kiemkho_path %>
+</div>

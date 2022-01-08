@@ -4,7 +4,7 @@ class Quanlyuser
   field :tendangnhap, type: String
   field :sdt, type: Integer
   field :email, type: String
-  field :ngaysinh, type: Date
-  field :ngaytao, type: Date
+  field :ngaysinh, type: String
+  field :ngaytao, type: String
   field :vitri, type: String
 end

@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <h1 class="title">Hóa đơn</h1>
 
 <div class="container-fluid tablecontain">
@@ -28,25 +29,25 @@
         <% @hoadons.each do |hoadon| %>
           
           <tr>
-          <th scope="row"><%= hoadon.mahoadon %></th>
-          <td><%= hoadon.ngaytao %></td>
-          <td><%= hoadon.makh %></td>
-          <td><%= hoadon.tenkh %></td>
-          <td><%= hoadon.tientra %> (VND)</td>
-          <td><%= hoadon.tienno %> (VND)</td>
-          <td><%= hoadon.tongcong %> (VND)</td>
-          <td><%= hoadon.nguoitao %></td>
-          <td>
-            <ul class="ulhoadon">
+            <th scope="row"><%= hoadon.mahoadon %></th>
+            <td><%= hoadon.ngaytao %></td>
+            <td><%= hoadon.makh %></td>
+            <td><%= hoadon.tenkh %></td>
+            <td><%= hoadon.tientra %> (VND)</td>
+            <td><%= hoadon.tienno %> (VND)</td>
+            <td><%= hoadon.tongcong %> (VND)</td>
+            <td><%= hoadon.nguoitao %></td>
+            <td>
+              <ul class="ulhoadon">
+              <li>
+              <%= link_to "Chỉnh sửa", edit_hoadon_path(hoadon), class: 'btn btn-primary bg-primary' %>
+            </li>
             <li>
-            <%= link_to "Chỉnh sửa", edit_hoadon_path(hoadon), class: 'btn btn-primary bg-primary' %>
-          </li>
-          <li>
-            <%= link_to "Xóa", hoadon, :confirm => "Xóa dữ liệu ?", :method => :delete , class:'btn btn-primary bg-danger' %>
-          </li>
-            </ul>
-          </td>
-        </tr>
+              <%= link_to "Xóa", hoadon, data: { confirm: 'Xóa dữ liệu?' }, :method => :delete , class:'btn btn-primary bg-danger' %>
+            </li>
+              </ul>
+            </td>
+          </tr>
         <% end %>
       </thread>
     </table>

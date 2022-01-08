@@ -1,6 +1,6 @@
 class Phieunhap
   include Mongoid::Document
   field :maphieunhap, type: Integer
-  field :ngaytao, type: Date
+  field :ngaytao, type: String
   field :tongcong, type: Float
 end

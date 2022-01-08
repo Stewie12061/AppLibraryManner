@@ -13,47 +13,47 @@
     <% end %>
 
     <div class="field form-group">
-      <%= form.label :mahoadon %>
+      <%= form.label "Mã hóa đơn" %>
       <%= form.number_field :mahoadon, class:"form-control" %>
     </div>
 
     <div class="field form-group">
-      <%= form.label :ngaytao %>
+      <%= form.label "Ngày tạo" %>
       <%= form.text_field :ngaytao, class:"form-control" %>
     </div>
 
     <div class="field form-group">
-      <%= form.label :makh %>
+      <%= form.label "Mã khách hàng" %>
       <%= form.number_field :makh, class:"form-control" %>
     </div>
 
     <div class="field form-group">
-      <%= form.label :tenkh %>
+      <%= form.label "Tên khách hàng" %>
       <%= form.text_field :tenkh, class:"form-control" %>
     </div>
 
     <div class="field form-group">
-      <%= form.label :tientra %>
+      <%= form.label "Tiền trả" %>
       <%= form.text_field :tientra, class:"form-control" %>
     </div>
 
     <div class="field form-group">
-      <%= form.label :tienno %>
+      <%= form.label "Tiền nợ" %>
       <%= form.text_field :tienno, class:"form-control" %>
     </div>
 
     <div class="field form-group">
-      <%= form.label :tongcong %>
+      <%= form.label "Tổng cộng" %>
       <%= form.text_field :tongcong, class:"form-control" %>
     </div>
 
     <div class="field form-group">
-      <%= form.label :nguoitao %>
+      <%= form.label "Người tạo" %>
       <%= form.text_field :nguoitao, class:"form-control" %>
     </div>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit "lưu chỉnh sửa", class:"btn btn-color"  %>
     </div>
   <% end %>
 </div>

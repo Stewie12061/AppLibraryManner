@@ -1,41 +1,46 @@
 <p id="notice"><%= notice %></p>
+<h1 class="title">Tra cứu sách</h1>
 
-<h1>Tracuusaches</h1>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+  <th>
+  <h2>Danh sách sách</h2>
+</th>
+<th>
+  <%= link_to "Thêm dữ liệu", new_tracuusach_path, class: 'btn btn-primary bg-primary' %>
+</th>
+  </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Masach</th>
-      <th>Tensach</th>
-      <th>Theloai</th>
-      <th>Tacgia</th>
-      <th>Nhaxuatban</th>
-      <th>Namxuatban</th>
-      <th>Giatien</th>
-      <th>Soluong</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tracuusaches.each do |tracuusach| %>
-      <tr>
-        <td><%= tracuusach.masach %></td>
-        <td><%= tracuusach.tensach %></td>
-        <td><%= tracuusach.theloai %></td>
-        <td><%= tracuusach.tacgia %></td>
-        <td><%= tracuusach.nhaxuatban %></td>
-        <td><%= tracuusach.namxuatban %></td>
-        <td><%= tracuusach.giatien %></td>
-        <td><%= tracuusach.soluong %></td>
-        <td><%= link_to 'Show', tracuusach %></td>
-        <td><%= link_to 'Edit', edit_tracuusach_path(tracuusach) %></td>
-        <td><%= link_to 'Destroy', tracuusach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark"> 
+        <th scope="col">Mã sách</th>
+        <th scope="col">Tên sách</th>
+        <th scope="col">Thể loại</th>
+        <th scope="col">Tác giả</th>
+        <th scope="col">Nhà xuất bản</th>
+        <th scope="col">Năm xuất bản</th>
+        <th scope="col">Giá tiền </th>
+        <th scope="col">Số lượng</th>
       </tr>
-    <% end %>
-  </tbody>
+      <thread>
+        <% @tracuusaches.each do |tracuusach| %>
+          <tr>
+            <th scope="row"><%= tracuusach.masach %></th>
+            <td><%= tracuusach.tensach %></td>
+            <td><%= tracuusach.theloai %></td>
+            <td><%= tracuusach.tacgia %></td>
+            <td><%= tracuusach.nhaxuatban %></td>
+            <td><%= tracuusach.namxuatban %></td>
+            <td><%= tracuusach.giatien %> (VNĐ)</td>
+            <td><%= tracuusach.soluong %></td>
+          </tr>
+        <% end %>
+      </thread>
+    </table>
+
+  
+  </tr>
 </table>
-
-<br>
-
-<%= link_to 'New Tracuusach', new_tracuusach_path %>
+</div>

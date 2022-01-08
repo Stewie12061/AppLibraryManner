@@ -1,32 +1,34 @@
-<%= form_with(model: phieunhap) do |form| %>
-  <% if phieunhap.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(phieunhap.errors.count, "error") %> prohibited this phieunhap from being saved:</h2>
+<div class="container-fluid">
+  <%= form_with(model: phieunhap) do |form| %>
+    <% if phieunhap.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(phieunhap.errors.count, "error") %> prohibited this phieunhap from being saved:</h2>
 
-      <ul>
-        <% phieunhap.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% phieunhap.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= form.label "Mã phiếu nhập" %>
+      <%= form.number_field :maphieunhap, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Ngày tạo" %>
+      <%= form.text_field :ngaytao, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tổng cộng" %>
+      <%= form.text_field :tongcong, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "lưu chỉnh sửa", class:"btn btn-color" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :maphieunhap %>
-    <%= form.number_field :maphieunhap %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ngaytao %>
-    <%= form.date_select :ngaytao %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tongcong %>
-    <%= form.text_field :tongcong %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

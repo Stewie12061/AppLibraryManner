@@ -1,42 +1,44 @@
-<%= form_with(model: phieuthu) do |form| %>
-  <% if phieuthu.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(phieuthu.errors.count, "error") %> prohibited this phieuthu from being saved:</h2>
+<div class="container-fluid"> 
+  <%= form_with(model: phieuthu) do |form| %>
+    <% if phieuthu.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(phieuthu.errors.count, "error") %> prohibited this phieuthu from being saved:</h2>
 
-      <ul>
-        <% phieuthu.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% phieuthu.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= form.label "Mã phiếu thu" %>
+      <%= form.number_field :maphieuthu, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Ngày tạo" %>
+      <%= form.text_field :ngaytao, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Mã khách hàng" %>
+      <%= form.number_field :makh, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tên khách hàng" %>
+      <%= form.text_field :tenkh, class:"form-control", class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tổng cộng" %>
+      <%= form.number_field :tongcong, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "lưu chỉnh sửa", class:"btn btn-color" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :maphieuthu %>
-    <%= form.number_field :maphieuthu %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ngaytao %>
-    <%= form.date_select :ngaytao %>
-  </div>
-
-  <div class="field">
-    <%= form.label :makh %>
-    <%= form.number_field :makh %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tenkh %>
-    <%= form.text_field :tenkh %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tongcong %>
-    <%= form.number_field :tongcong %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

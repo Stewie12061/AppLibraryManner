@@ -1,27 +1,29 @@
-<%= form_with(model: tacgium) do |form| %>
-  <% if tacgium.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(tacgium.errors.count, "error") %> prohibited this tacgium from being saved:</h2>
+<div class="container-fluid"> 
+  <%= form_with(model: tacgium) do |form| %>
+    <% if tacgium.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(tacgium.errors.count, "error") %> prohibited this tacgium from being saved:</h2>
 
-      <ul>
-        <% tacgium.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% tacgium.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= form.label "Tên tác giả" %>
+      <%= form.text_field :tentacgia, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "năm sinh" %>
+      <%= form.number_field :namsinh, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "lưu chỉnh sửa", class:"btn btn-color" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :tentacgia %>
-    <%= form.text_field :tentacgia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :namsinh %>
-    <%= form.number_field :namsinh %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

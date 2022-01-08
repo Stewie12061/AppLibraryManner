@@ -1,52 +1,54 @@
-<%= form_with(model: quanlyuser) do |form| %>
-  <% if quanlyuser.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(quanlyuser.errors.count, "error") %> prohibited this quanlyuser from being saved:</h2>
+<div class="container-fluid">
+  <%= form_with(model: quanlyuser) do |form| %>
+    <% if quanlyuser.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(quanlyuser.errors.count, "error") %> prohibited this quanlyuser from being saved:</h2>
 
-      <ul>
-        <% quanlyuser.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% quanlyuser.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= form.label "Tên người dùng" %>
+      <%= form.text_field :tenuser, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tên đăng nhập" %>
+      <%= form.text_field :tendangnhap, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Số điện thoại" %>
+      <%= form.number_field :sdt, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Email" %>
+      <%= form.text_field :email, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Ngày sinh" %>
+      <%= form.text_field :ngaysinh, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Ngày tạo" %>
+      <%= form.text_field :ngaytao, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Vị trí" %>
+      <%= form.text_field :vitri, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "lưu chỉnh sửa", class:"btn btn-color" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :tenuser %>
-    <%= form.text_field :tenuser %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tendangnhap %>
-    <%= form.text_field :tendangnhap %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sdt %>
-    <%= form.number_field :sdt %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ngaysinh %>
-    <%= form.date_select :ngaysinh %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ngaytao %>
-    <%= form.date_select :ngaytao %>
-  </div>
-
-  <div class="field">
-    <%= form.label :vitri %>
-    <%= form.text_field :vitri %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

@@ -1,29 +1,44 @@
 <p id="notice"><%= notice %></p>
+<h1 class="title">Tác giả</h1>
 
-<h1>Tacgia</h1>
+<div class="container-fluid tablecontain">
+<table class="table align-middle">
+  <tr>
+  <th>
+  <h2>Danh sách tác giả</h2>
+</th>
+<th>
+  <%= link_to "Thêm dữ liệu", new_tacgium_path, class: 'btn btn-primary bg-primary' %>
+</th>
+  </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tentacgia</th>
-      <th>Namsinh</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tacgia.each do |tacgium| %>
-      <tr>
-        <td><%= tacgium.tentacgia %></td>
-        <td><%= tacgium.namsinh %></td>
-        <td><%= link_to 'Show', tacgium %></td>
-        <td><%= link_to 'Edit', edit_tacgium_path(tacgium) %></td>
-        <td><%= link_to 'Destroy', tacgium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th scope="col">Tên tác giả</th>
+        <th scope="col">Năm sinh</th>
+        <th scope="col">Hành động</th>
       </tr>
-    <% end %>
-  </tbody>
+      <thread>
+        <% @tacgia.each do |tacgia| %>
+          <tr>
+          <th scope="row"><%= tacgia.tentacgia %></th>
+          <td><%= tacgia.namsinh %></td>
+          <td>
+            <ul class="ultacgia">
+              <li>
+              <%= link_to "Chỉnh sửa", edit_tacgium_path(tacgia), class: 'btn btn-primary bg-primary' %>
+              </li>
+              <li>
+              <%= link_to "Xóa", tacgia, :confirm => "Xóa dữ liệu ?", :method => :delete , class:'btn btn-primary bg-danger' %>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <% end %>   
+      </thread>
+    </table>
+
+  </tr>
 </table>
-
-<br>
-
-<%= link_to 'New Tacgium', new_tacgium_path %>
+</div>

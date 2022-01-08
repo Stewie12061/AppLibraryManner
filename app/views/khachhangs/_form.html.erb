@@ -1,57 +1,59 @@
-<%= form_with(model: khachhang) do |form| %>
-  <% if khachhang.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(khachhang.errors.count, "error") %> prohibited this khachhang from being saved:</h2>
+<div class="container-fluid">  
+  <%= form_with(model: khachhang) do |form| %>
+    <% if khachhang.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(khachhang.errors.count, "error") %> prohibited this khachhang from being saved:</h2>
 
-      <ul>
-        <% khachhang.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% khachhang.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= form.label "STT" %>
+      <%= form.number_field :stt, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tên khách hàng" %>
+      <%= form.text_field :tenkh, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Mã khách hàng" %>
+      <%= form.number_field :makh, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Địa chỉ" %>
+      <%= form.text_field :diachi, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Email" %>
+      <%= form.text_field :email, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Ngày sinh" %>
+      <%= form.text_field :ngaysinh, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Tổng nợ" %>
+      <%= form.text_field :tongno, class:"form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label "Loại khách hàng" %>
+      <%= form.text_field :loaikh, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "lưu chỉnh sửa", class:"btn btn-color" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :stt %>
-    <%= form.number_field :stt %>
   </div>
-
-  <div class="field">
-    <%= form.label :tenkh %>
-    <%= form.text_field :tenkh %>
-  </div>
-
-  <div class="field">
-    <%= form.label :makh %>
-    <%= form.number_field :makh %>
-  </div>
-
-  <div class="field">
-    <%= form.label :diachi %>
-    <%= form.text_field :diachi %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ngaysinh %>
-    <%= form.date_select :ngaysinh %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tongno %>
-    <%= form.text_field :tongno %>
-  </div>
-
-  <div class="field">
-    <%= form.label :loaikh %>
-    <%= form.text_field :loaikh %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
