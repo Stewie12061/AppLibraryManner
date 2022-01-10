@@ -10,6 +10,7 @@
 @import './baocao';
 @import './auth';
 @import './navbar';
+@import './splidejs';
 
 hr{
     height:4px;
@@ -67,6 +68,7 @@ body{
   margin: 0 auto;
   padding-bottom: 50px;
   width: 100%;
+  margin-bottom: 30px;
 }
 .row{
   width: 100%;
@@ -94,4 +96,15 @@ body{
     font-size: 10px;
   }
 
+}
+.float-r{
+  float: right !important;
+}
+.title{
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+h2{
+  padding: 10px;
 }

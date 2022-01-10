@@ -1,10 +1,53 @@
 <div class="container">
   </br>
-  <h2>Nhân viên tạo tài khoản mới cần phải nhận thông tin người dùng</h2>
-  </br>
   <div class="container-fluid">
-    <%= link_to "Nhập thông tin tại đây" , new_quanlyuser_path, class: 'btn btn-color' %>
+    <h2 class="title">Nhân viên tạo tài khoản mới cần phải nhập thông tin để quản lý</h2>
+    </br>
+    <div class="container-fluid row">
+      <div class="col-6">
+        <%= link_to "Nhập thông tin tại đây" , new_quanlyuser_path, class: 'btn btn-color' %>
+      </div>
+      <div class="col-6">
+        <%= link_to "Quản lý tài khoản đăng nhập", quanlytkdangnhap_index_path, class: 'btn btn-color float-r' %>
+      </div>
+    </div>
   </div>
 
+  <div class="container-fluid">
+    <section group='banner' data-controller='splide'>
+      <div class="splide" id='splide' data-splide-target='container'>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="slide__content">
+                <%= image_tag("splide1.jpg") %>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slide__content">
+                <%= image_tag("splide2.jpg") %>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slide__content">
+                <%= image_tag("splide3.jpg") %>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slide__content">
+                <%= image_tag("splide4.jpg") %>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slide__content">
+                <%= image_tag("splide5.jpg") %>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  
 </div>
 </br>
