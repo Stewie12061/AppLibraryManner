@@ -25,7 +25,7 @@ class TacgiaController < ApplicationController
 
     respond_to do |format|
       if @tacgium.save
-        format.html { redirect_to tacgium_url(@tacgium), notice: "Tacgium was successfully created." }
+        format.html { redirect_to tacgium_url(@tacgium), notice: "Tacgia was successfully created." }
         format.json { render :show, status: :created, location: @tacgium }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class TacgiaController < ApplicationController
   def update
     respond_to do |format|
       if @tacgium.update(tacgium_params)
-        format.html { redirect_to tacgium_url(@tacgium), notice: "Tacgium was successfully updated." }
+        format.html { redirect_to tacgium_url(@tacgium), notice: "Tacgia was successfully updated." }
         format.json { render :show, status: :ok, location: @tacgium }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class TacgiaController < ApplicationController
     @tacgium.destroy
 
     respond_to do |format|
-      format.html { redirect_to tacgia_url, notice: "Tacgium was successfully destroyed." }
+      format.html { redirect_to tacgia_url, notice: "Tacgia was successfully destroyed." }
       format.json { head :no_content }
     end
   end

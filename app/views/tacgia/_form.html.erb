@@ -2,7 +2,7 @@
   <%= form_with(model: tacgium) do |form| %>
     <% if tacgium.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(tacgium.errors.count, "error") %> prohibited this tacgium from being saved:</h2>
+        <h2><%= pluralize(tacgium.errors.count, "error") %> prohibited this tacgia from being saved:</h2>
 
         <ul>
           <% tacgium.errors.each do |error| %>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="actions">
-      <%= form.submit "lưu chỉnh sửa", class:"btn btn-color" %>
+      <%= form.submit "lưu dữ liệu", class:"btn btn-color" %>
     </div>
   <% end %>
 </div>
